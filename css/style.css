@@ -79,7 +79,7 @@ body {
 .logo-circle {
   width: 72px;
   height: 72px;
-  background: linear-gradient(145deg, var(--gold), var(--accent);
+  background: linear-gradient(145deg, var(--gold), var(--accent));
   border-radius: 50%;
   display: flex;
   align-items: center;
