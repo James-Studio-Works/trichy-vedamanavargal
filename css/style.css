@@ -1,0 +1,639 @@
+/* திருச்சி வேதமாணவர்கள் - Main Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Catamaran:wght@300;400;500;600;700;800&family=Mukta+Malar:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #1a5f7a;
+  --primary-dark: #0d3b4d;
+  --secondary: #57c5b6;
+  --accent: #f4a261;
+  --gold: #e9c46a;
+  --warm: #e76f51;
+  --light: #fefae0;
+  --cream: #fff8e7;
+  --soft-green: #2a9d8f;
+  --deep-blue: #264653;
+  --text: #1d3557;
+  --text-light: #457b9d;
+  --white: #ffffff;
+  --shadow: 0 8px 30px rgba(26, 95, 122, 0.15);
+  --radius: 16px;
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans Tamil', 'Catamaran', 'Mukta Malar', sans-serif;
+  background: linear-gradient(135deg, #fefae0 0%, #e8f5f3 50%, #fdf6e3 100%);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ========== HEADER ========== */
+.site-header {
+  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--primary) 50%, var(--soft-green) 100%);
+  color: var(--white);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  background: rgba(0,0,0,0.15);
+  font-size: 0.9rem;
+}
+
+.header-top a {
+  color: var(--gold);
+  text-decoration: none;
+  margin-left: 18px;
+  transition: var(--transition);
+}
+
+.header-top a:hover {
+  color: var(--accent);
+}
+
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 5%;
+}
+
+.logo-circle {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(145deg, var(--gold), var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 6px 20px rgba(233, 196, 106, 0.5);
+  border: 3px solid rgba(255,255,255,0.4);
+  flex-shrink: 0;
+}
+
+.brand-text h1 {
+  font-family: 'Mukta Malar', 'Noto Sans Tamil', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+  margin-bottom: 4px;
+}
+
+.brand-text .tagline {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Psalm Banner */
+.psalm-banner {
+  background: linear-gradient(90deg, rgba(254, 250, 224, 0.95), rgba(255, 248, 231, 0.98));
+  color: var(--deep-blue);
+  padding: 28px 5%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-top: 4px solid var(--gold);
+  border-bottom: 4px solid var(--gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.psalm-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(42, 157, 143, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.psalm-image {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2a9d8f, #1a5f7a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  box-shadow: 0 10px 30px rgba(42, 157, 143, 0.35);
+  border: 5px solid var(--gold);
+  position: relative;
+  z-index: 1;
+}
+
+.psalm-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.psalm-ref {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--primary), var(--soft-green));
+  color: white;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.psalm-text {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  font-weight: 500;
+  color: var(--deep-blue);
+}
+
+.psalm-text strong {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+/* Navigation */
+.main-nav {
+  background: var(--primary-dark);
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.nav-list a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  padding: 16px 22px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--gold);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  background: rgba(255,255,255,0.08);
+  color: var(--gold);
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+  width: 70%;
+}
+
+/* ========== HERO / INTRO ========== */
+.hero {
+  padding: 50px 5%;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(42, 157, 143, 0.08) 0%, transparent 100%);
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 780px;
+  margin: 0 auto 28px;
+  font-size: 1.15rem;
+  color: var(--text-light);
+}
+
+.schedule-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.day-badge {
+  background: linear-gradient(135deg, var(--soft-green), var(--primary));
+  color: white;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(42, 157, 143, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.day-badge span {
+  font-size: 1.2rem;
+}
+
+/* ========== SECTIONS ========== */
+.section {
+  padding: 55px 5%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  border-radius: 2px;
+}
+
+.section-title p {
+  margin-top: 14px;
+  color: var(--text-light);
+  font-size: 1.05rem;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(42, 157, 143, 0.12);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(26, 95, 122, 0.22);
+}
+
+.card-header {
+  padding: 22px 22px 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.card-icon.audio { background: linear-gradient(145deg, #e76f51, #f4a261); }
+.card-icon.video { background: linear-gradient(145deg, #264653, #1a5f7a); color: white; }
+.card-icon.pdf { background: linear-gradient(145deg, #e9c46a, #f4a261); }
+.card-icon.pptx { background: linear-gradient(145deg, #2a9d8f, #57c5b6); }
+.card-icon.docx { background: linear-gradient(145deg, #457b9d, #1a5f7a); color: white; }
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.card-meta {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+.card-body {
+  padding: 0 22px 18px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.card-footer {
+  padding: 14px 22px;
+  background: linear-gradient(90deg, rgba(42, 157, 143, 0.06), rgba(233, 196, 106, 0.08));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--soft-green));
+  color: white;
+  box-shadow: 0 4px 15px rgba(26, 95, 122, 0.3);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(26, 95, 122, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--accent));
+  color: var(--deep-blue);
+}
+
+/* Type filter tabs */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.filter-tab {
+  padding: 10px 22px;
+  border-radius: 50px;
+  background: white;
+  border: 2px solid rgba(42, 157, 143, 0.25);
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.filter-tab:hover,
+.filter-tab.active {
+  background: linear-gradient(135deg, var(--primary), var(--soft-green));
+  color: white;
+  border-color: transparent;
+}
+
+/* About / Info boxes */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.info-box {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--soft-green);
+  transition: var(--transition);
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+
+.info-box .icon {
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+}
+
+.info-box h3 {
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.info-box p {
+  color: var(--text-light);
+  font-size: 0.98rem;
+}
+
+/* Schedule section */
+.schedule-table {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.schedule-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th {
+  background: linear-gradient(135deg, var(--primary), var(--soft-green));
+  color: white;
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.schedule-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table tr:nth-child(even) {
+  background: rgba(42, 157, 143, 0.04);
+}
+
+.day-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.day-dot.sun { background: #e76f51; }
+.day-dot.tue { background: #2a9d8f; }
+.day-dot.thu { background: #e9c46a; }
+.day-dot.sat { background: #457b9d; }
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--primary-dark) 100%);
+  color: rgba(255,255,255,0.9);
+  padding: 50px 5% 25px;
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+  margin-bottom: 35px;
+}
+
+.footer-col h4 {
+  color: var(--gold);
+  font-size: 1.15rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.footer-col p,
+.footer-col a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  display: block;
+  transition: var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brand-text h1 {
+    font-size: 1.4rem;
+  }
+  .psalm-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px 4%;
+  }
+  .psalm-image {
+    width: 110px;
+    height: 110px;
+    font-size: 3.5rem;
+  }
+  .psalm-text {
+    font-size: 1.05rem;
+  }
+  .nav-list {
+    justify-content: center;
+  }
+  .nav-list a {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+  .section {
+    padding: 40px 4%;
+  }
+}
+
+/* Decorative elements */
+.wave-divider {
+  height: 60px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%23fefae0' d='M0,40 C360,100 720,0 1080,50 C1260,75 1380,60 1440,40 L1440,100 L0,100 Z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: cover;
+  margin-top: -1px;
+}
+
+.floating-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Utility */
+.hidden { display: none !important; }
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
